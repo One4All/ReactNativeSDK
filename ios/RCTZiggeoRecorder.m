@@ -330,7 +330,7 @@ RCT_REMAP_METHOD(record,
         [m_ziggeo.config setRecorderCacheConfig:self.cacheConfig];
 
         ZiggeoRecorder2* recorder = [[ZiggeoRecorder2 alloc] initWithZiggeoApplication:m_ziggeo];
-        recorder.coverSelectorEnabled = self->_coverSelectorEnabled;
+        recorder.coverSelectorEnabled = NO;
         recorder.cameraFlipButtonVisible = self->_cameraFlipButtonVisible;
         recorder.cameraDevice = self->_camera;
         recorder.recorderDelegate = context;
