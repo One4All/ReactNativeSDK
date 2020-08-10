@@ -330,12 +330,12 @@ RCT_REMAP_METHOD(record,
         [m_ziggeo.config setRecorderCacheConfig:self.cacheConfig];
 
         ZiggeoRecorder2* recorder = [[ZiggeoRecorder2 alloc] initWithZiggeoApplication:m_ziggeo];
-        recorder.coverSelectorEnabled = NO;
+        recorder.coverSelectorEnabled = false;
         recorder.cameraFlipButtonVisible = self->_cameraFlipButtonVisible;
         recorder.cameraDevice = self->_camera;
         recorder.recorderDelegate = context;
         recorder.extraArgsForCreateVideo = self->_additionalRecordingParams;
-        recorder.showSoundIndicator = NO;
+        recorder.showSoundIndicator = false;
         recorder.useLiveStreaming = self->_liveStreamingEnabled;
         recorder.recordingQuality = self->_quality;
         recorder.interfaceConfig = parseRecorderInterfaceConfig(self.interfaceConfig);
